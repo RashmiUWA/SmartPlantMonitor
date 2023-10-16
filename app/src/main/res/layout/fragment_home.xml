@@ -42,15 +42,29 @@
         android:textSize="15dp"
         />
 
+    <Button
+        android:id="@+id/btnFetchData"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imageView2"
+        android:text="Show Live Data"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:textColor="@color/white"
+        >
+
+    </Button>
 
     <ExpandableListView
+
         android:layout_below="@+id/imageView2"
         android:id="@+id/elvDevices"
         android:layout_height="match_parent"
         android:layout_width="match_parent"
         android:indicatorLeft="?android:attr/expandableListPreferredItemIndicatorLeft"
         android:divider="@android:color/darker_gray"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="80dp"
         android:dividerHeight="0.5dp" />
 
 </RelativeLayout>

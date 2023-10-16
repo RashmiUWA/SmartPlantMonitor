@@ -2,8 +2,8 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingLeft="40dp"
-    android:paddingRight="40dp"
+    android:paddingLeft="29dp"
+    android:paddingRight="29dp"
     >
 
     <LinearLayout
@@ -32,6 +32,23 @@
                 android:background="@drawable/img_description"
                 />
             </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tvDescriptionlbl"
+                android:textColor="@color/black"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:text="Description"
+                android:gravity="left"/>
+
+            <TextView
+                android:textColor="@color/black"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.1"
+                android:text=":"
+                android:gravity="left"/>
 
             <TextView
                 android:id="@+id/tvDescription"
@@ -65,12 +82,34 @@
             </RelativeLayout>
 
             <TextView
-                android:id="@+id/tvCondition"
+                android:id="@+id/tvConditionlbl"
                 android:textColor="@color/black"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
+                android:layout_weight="0.5"
+                android:text="Condition"
                 android:gravity="left"/>
+
+            <TextView
+                android:textColor="@color/black"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.1"
+                android:text=":"
+                android:gravity="left"/>
+
+
+            <RatingBar
+                android:id="@+id/rbCondition"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:numStars="5"
+                android:rating="1"
+                android:progressBackgroundTint="@color/black"
+                style="?android:attr/ratingBarStyleIndicator"
+                />
+
         </LinearLayout>
 
         <LinearLayout
@@ -94,6 +133,23 @@
                     android:background="@drawable/img_temperatures"
                     />
             </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tvAvgTemplbl"
+                android:textColor="@color/black"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:text="Temp(C)"
+                android:gravity="left"/>
+
+            <TextView
+                android:textColor="@color/black"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.1"
+                android:text=":"
+                android:gravity="left"/>
 
             <TextView
                 android:id="@+id/tvAvgTemp"
@@ -127,6 +183,23 @@
             </RelativeLayout>
 
             <TextView
+                android:id="@+id/tvAvgHumiditylbl"
+                android:textColor="@color/black"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:text="Humidity(%)"
+                android:gravity="left"/>
+
+            <TextView
+                android:textColor="@color/black"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.1"
+                android:text=":"
+                android:gravity="left"/>
+
+            <TextView
                 android:id="@+id/tvAvgHumidity"
                 android:textColor="@color/black"
                 android:layout_width="0dp"
@@ -156,6 +229,23 @@
                     android:background="@drawable/img_light"
                     />
             </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tvAvgLightlbl"
+                android:textColor="@color/black"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:text="Light(%)"
+                android:gravity="left"/>
+
+            <TextView
+                android:textColor="@color/black"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.1"
+                android:text=":"
+                android:gravity="left"/>
 
             <TextView
                 android:id="@+id/tvAvgLight"
@@ -189,6 +279,23 @@
             </RelativeLayout>
 
             <TextView
+                android:id="@+id/tvAvgSoilMoisturelbl"
+                android:textColor="@color/black"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:text="Light(%)"
+                android:gravity="left"/>
+
+            <TextView
+                android:textColor="@color/black"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.1"
+                android:text=":"
+                android:gravity="left"/>
+
+            <TextView
                 android:id="@+id/tvAvgSoilMoisture"
                 android:textColor="@color/black"
                 android:layout_width="0dp"
@@ -197,5 +304,52 @@
                 android:gravity="left"/>
         </LinearLayout>
 
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <RelativeLayout
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:gravity="center"
+                android:layout_weight="0.1"
+                >
+                <ImageView
+                    android:text="Button 1"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/img_status"
+                    />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tvStatuslbl"
+                android:textColor="@color/black"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:text="Status"
+                android:gravity="left"/>
+
+            <TextView
+                android:textColor="@color/black"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.1"
+                android:text=":"
+                android:gravity="left"/>
+
+            <TextView
+                android:id="@+id/tvStatus"
+                android:textColor="@color/black"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="left"/>
+        </LinearLayout>
     </LinearLayout>
 </LinearLayout>

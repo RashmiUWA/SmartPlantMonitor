@@ -11,6 +11,7 @@ public class DevicesDto {
     private Double avgLight;
     private Double avgSoilMoisture;
 
+    private String status;
     public String getId() {
         return id;
     }
@@ -73,5 +74,13 @@ public class DevicesDto {
 
     public void setAvgSoilMoisture(Double avgSoilMoisture) {
         this.avgSoilMoisture = avgSoilMoisture;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
     }
 }

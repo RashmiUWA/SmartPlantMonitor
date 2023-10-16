@@ -8,6 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseExpandableListAdapter;
+import android.widget.RatingBar;
 import android.widget.TextView;
 
 import com.example.smartplantmonitor.R;
@@ -48,8 +49,8 @@ public class CustomExpandableListAdapter extends BaseExpandableListAdapter {
         }
         TextView tvDescription = (TextView) convertView
                 .findViewById(R.id.tvDescription);
-        TextView tvCondition = (TextView) convertView
-                .findViewById(R.id.tvCondition);
+        RatingBar rbCondition = (RatingBar) convertView
+                .findViewById(R.id.rbCondition);
         TextView tvAvgTemp = (TextView) convertView
                 .findViewById(R.id.tvAvgTemp);
         TextView tvAvgHumidity = (TextView) convertView
@@ -58,13 +59,18 @@ public class CustomExpandableListAdapter extends BaseExpandableListAdapter {
                 .findViewById(R.id.tvAvgLight);
         TextView tvAvgSoilMoisture = (TextView) convertView
                 .findViewById(R.id.tvAvgSoilMoisture);
+        TextView tvStatus = (TextView) convertView
+                .findViewById(R.id.tvStatus);
 
         tvDescription.setText(devicesDto.getDescription());
-        tvCondition.setText(String.valueOf(devicesDto.getCondition()));
+        rbCondition.setMax(5);
+        rbCondition.setNumStars(5);
+        rbCondition.setRating(devicesDto.getCondition());
         tvAvgTemp.setText(String.valueOf(devicesDto.getAvgTemp()));
         tvAvgHumidity.setText(String.valueOf(devicesDto.getAvgHumidity()));
         tvAvgLight.setText(String.valueOf(devicesDto.getAvgLight()));
         tvAvgSoilMoisture.setText(String.valueOf(devicesDto.getAvgSoilMoisture()));
+        tvStatus.setText(String.valueOf(devicesDto.getStatus()));
 
         return convertView;
     }

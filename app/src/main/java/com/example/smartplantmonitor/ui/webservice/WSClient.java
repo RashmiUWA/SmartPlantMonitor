@@ -175,14 +175,12 @@ public class WSClient {
 
     }
 
-    public UserDto getUserDataByID() throws ServerSyncFailedException {
-
-        String URL = Constants.USER_DATA_BY_ID;
+    public UserDto getUserDataByID(String url) throws ServerSyncFailedException {
 
         String response = "";
 
         try {
-            response = getData(URL);
+            response = getData(url);
             response = response == null ? "":response;
         }
         catch (ServerNotRespondingException ex)

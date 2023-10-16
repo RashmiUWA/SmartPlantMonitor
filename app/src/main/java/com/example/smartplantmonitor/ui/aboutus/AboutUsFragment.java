@@ -1,4 +1,4 @@
-package com.example.smartplantmonitor.ui.slideshow;
+package com.example.smartplantmonitor.ui.aboutus;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -10,18 +10,19 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
-import com.example.smartplantmonitor.databinding.FragmentSlideshowBinding;
+import com.example.smartplantmonitor.databinding.FragmentAboutusBinding;
 
-public class SlideshowFragment extends Fragment {
 
-    private FragmentSlideshowBinding binding;
+public class AboutUsFragment extends Fragment {
+
+    private FragmentAboutusBinding binding;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        SlideshowViewModel slideshowViewModel =
-                new ViewModelProvider(this).get(SlideshowViewModel.class);
+        AboutUsViewModel slideshowViewModel =
+                new ViewModelProvider(this).get(AboutUsViewModel.class);
 
-        binding = FragmentSlideshowBinding.inflate(inflater, container, false);
+        binding = FragmentAboutusBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
         final TextView textView = binding.textSlideshow;
